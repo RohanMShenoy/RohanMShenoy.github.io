@@ -1,117 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | PhD Candidate in Mathematics</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan M. Shenoy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-    <div class="site-wrapper">
-        
-        <aside class="sidebar">
-            <div class="profile-frame">
-                <img src="profile.jpg" alt="Rohan M. Shenoy" class="profile-img">
-            </div>
-
-            <h1 class="name">Rohan M. Shenoy</h1>
-            <p class="subtitle">PhD Student in Mathematics</p>
-            <p class="institution">[Your University]</p>
-            
-            <button id="theme-toggle" aria-label="Toggle dark mode">Mode</button>
-
-            <hr class="sidebar-divider">
-
-            <nav class="sidebar-nav">
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#talks">Talks</a>
-                <a href="#teaching">Teaching</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            
-            <section id="about">
-                <h2>About Me</h2>
-                <p>I am a PhD student in the Mathematics Department at [Your University], advised by [Advisor's Name]. My research interests lie broadly in geometry, probability, or combinatorics.</p>
-            </section>
-
-            <hr>
-
-            <section id="research">
-                <h2>Publications & Preprints</h2>
-                <div class="paper">
-                    <h3>A Highly Interesting Mathematical Theorem</h3>
-                    <p class="authors"><strong>Rohan M. Shenoy</strong>, Co-author.</p>
-                    <p class="journal"><em>arXiv preprint</em> (2026)</p>
-                    <p class="abstract"><strong>Abstract:</strong> Insert your mathematical summary framework right here.</p>
-                    <div class="button-group">
-                        <a href="#" class="btn btn-primary">arXiv</a>
-                        <a href="#" class="btn btn-secondary">Code</a>
-                    </div>
-                </div>
-            </section>
-
-            <hr>
-
-            <section id="talks">
-                <h2>Talks & Presentations</h2>
-                <ul>
-                    <li><strong>Graduate Student Seminar</strong> – <em>"An Introduction to My Field"</em> (Spring 2026)</li>
-                </ul>
-            </section>
-
-            <hr>
-
-            <section id="teaching">
-                <h2>Teaching & Service</h2>
-                <ul>
-                    <li><strong>Math 101: Calculus I</strong> – Head TA (Fall 2025)</li>
-                </ul>
-            </section>
-
-            <hr>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <p><strong>Email:</strong> yourname [at] university [dot] edu</p>
-                <div class="button-group">
-                    <a href="#" class="btn btn-secondary">Google Scholar</a>
-                    <a href="#" class="btn btn-secondary">GitHub</a>
-                </div>
-            </section>
-
-            <footer>
-                <p>&copy; 2026 Rohan M. Shenoy.</p>
-            </footer>
-        </main>
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="header-name">Rohan M. Shenoy</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-icon">&#9788;</span> Dark Toggle
+      </button>
     </div>
+  </header>
 
-    <script>
-        const toggleBtn = document.getElementById('theme-toggle');
-        
-        // Check for saved user preference, otherwise default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        updateToggleButtonText(currentTheme);
+  <!-- ===================== LAYOUT WRAPPER ===================== -->
+  <div class="layout">
 
-        toggleBtn.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            let newTheme = theme === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateToggleButtonText(newTheme);
-        });
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <div class="sidebar-photo-wrap">
+        <img src="profile.JPG" alt="Rohan M. Shenoy thumbnail" class="sidebar-photo-thumb" />
+      </div>
+      <h2 class="sidebar-name">Rohan M. Shenoy</h2>
+      <p class="sidebar-title">PhD Student</p>
+      <a class="sidebar-affil" href="#" target="_blank">Your University, Mathematics</a>
 
-        function updateToggleButtonText(theme) {
-            toggleBtn.textContent = theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
-        }
-    </script>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+      <!-- ── ABOUT ── -->
+      <section id="about" class="content-section">
+        <h1 class="section-title">Rohan M. Shenoy</h1>
+
+        <blockquote class="bio-quote">
+          Rohan M. Shenoy is a PhD student in the Mathematics Department at [Your University],
+          advised by [Advisor's Name]. His research interests span geometry, probability,
+          and combinatorics, with a particular focus on [specific research area]. He is
+          broadly interested in the interplay between [field A] and [field B].
+        </blockquote>
+
+        <div class="about-columns">
+          <div class="about-left">
+            <h3>Affiliations</h3>
+            <ul class="affil-list">
+              <li><a href="#">Mathematics Department</a></li>
+              <li><a href="#">[Research Group or Center]</a></li>
+              <li><a href="#">[Institute / Program]</a></li>
+            </ul>
+          </div>
+          <div class="about-right">
+            <img src="profile.JPG" alt="Rohan M. Shenoy" class="about-photo" />
+          </div>
+        </div>
+
+        <div class="cv-positions">
+          <h3>Academic Positions</h3>
+
+          <div class="position-entry">
+            <span class="pos-title">PhD Student</span>
+            <span class="pos-meta">[Your University], Mathematics, 2023 –</span>
+          </div>
+
+          <h3>Education &amp; Training</h3>
+
+          <div class="position-entry">
+            <span class="pos-title">B.Sc. in Mathematics</span>
+            <span class="pos-meta">[Undergraduate University] – 2023</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── AWARDS ── -->
+      <section id="awards" class="content-section">
+        <h2 class="section-title">Selected Awards</h2>
+
+        <div class="award-entry">
+          <span class="award-label">Graduate Fellowship</span>
+          <div class="award-year">2024</div>
+          <p>
+            Awarded the [Fellowship Name] for outstanding promise in mathematical research.
+            The fellowship supports graduate study in mathematics and related fields.
+          </p>
+        </div>
+
+        <div class="award-entry">
+          <span class="award-label">Best Talk Award. [Conference Name].</span>
+          <div class="award-year">2023</div>
+          <p>
+            Received best talk award at [Conference] for the presentation
+            "Title of Talk". An extended version of the paper is available
+            <a href="#">here</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── RESEARCH ── -->
+      <section id="research" class="content-section">
+        <h2 class="section-title">Featured Work</h2>
+
+        <div class="works-grid">
+
+          <div class="work-card">
+            <div class="work-img-wrap">
+              <div class="work-img-placeholder">&#8731;</div>
+            </div>
+            <div class="work-body">
+              <h3>Topic One: [Your Main Research Area]</h3>
+              <p class="work-ref">ArXiv [XXXX.XXXXX]</p>
+              <p>
+                A brief description of your first main research area. Explain the
+                mathematical framework, key ideas, and open questions you are pursuing.
+                Mention collaborators or connections to other fields as relevant.
+              </p>
+            </div>
+          </div>
+
+          <div class="work-card">
+            <div class="work-img-wrap">
+              <div class="work-img-placeholder">&#8747;</div>
+            </div>
+            <div class="work-body">
+              <h3>Topic Two: [Second Research Direction]</h3>
+              <p class="work-ref">ArXiv [XXXX.XXXXX]</p>
+              <p>
+                Describe your second research direction here. What tools and techniques
+                do you employ? What are the main open problems you are working towards?
+                What connections to other mathematical areas have you discovered?
+              </p>
+            </div>
+          </div>
+
+          <div class="work-card">
+            <div class="work-img-wrap">
+              <div class="work-img-placeholder">&#8745;</div>
+            </div>
+            <div class="work-body">
+              <h3>Topic Three: [Applied or Collaborative Work]</h3>
+              <p class="work-ref">ArXiv [XXXX.XXXXX]</p>
+              <p>
+                Describe any applied or interdisciplinary work here. This might involve
+                connections to data science, physics, biology, or computer science.
+                Explain the mathematical challenges and your approach.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── PUBLICATIONS ── -->
+      <section id="publications" class="content-section">
+        <h2 class="section-title">Publications &amp; Preprints</h2>
+
+        <div class="pub-entry">
+          <h3 class="pub-title">A Highly Interesting Mathematical Theorem</h3>
+          <p class="pub-authors"><strong>Rohan M. Shenoy</strong>, Co-author Name.</p>
+          <p class="pub-venue"><em>arXiv preprint</em> (2026)</p>
+          <p class="pub-abstract">
+            <strong>Abstract:</strong> Insert your mathematical summary / framework here.
+            Describe the main result, the techniques used, and the significance of the work.
+          </p>
+          <div class="pub-links">
+            <a href="#" class="pub-link">arXiv</a>
+            <a href="#" class="pub-link">Code</a>
+            <a href="#" class="pub-link">Slides</a>
+          </div>
+        </div>
+
+        <div class="pub-entry">
+          <h3 class="pub-title">Second Paper Title Goes Here</h3>
+          <p class="pub-authors"><strong>Rohan M. Shenoy</strong>, Another Co-author.</p>
+          <p class="pub-venue"><em>Journal of Mathematics</em>, Vol. X, No. Y (2025)</p>
+          <p class="pub-abstract">
+            <strong>Abstract:</strong> Brief description of the second paper.
+            What problem does it solve and what are the key contributions?
+          </p>
+          <div class="pub-links">
+            <a href="#" class="pub-link">arXiv</a>
+            <a href="#" class="pub-link">Journal</a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ── TALKS ── -->
+      <section id="talks" class="content-section">
+        <h2 class="section-title">Talks &amp; Presentations</h2>
+
+        <div class="talk-entry">
+          <span class="talk-venue">Graduate Student Seminar, [Your University]</span>
+          <div class="talk-year">2026</div>
+          <p class="talk-title"><em>"An Introduction to My Research Area"</em></p>
+          <p>Invited talk at the weekly graduate seminar. Introduced the main ideas and
+             open problems in [your research area] to an audience of graduate students.</p>
+        </div>
+
+        <div class="talk-entry">
+          <span class="talk-venue">[Conference Name], [Location]</span>
+          <div class="talk-year">2025</div>
+          <p class="talk-title"><em>"Title of Conference Talk"</em></p>
+          <p>Contributed talk at [conference]. Presented results from [paper title].
+             <a href="#">Slides available here</a>.</p>
+        </div>
+
+      </section>
+
+      <!-- ── TEACHING ── -->
+      <section id="teaching" class="content-section">
+        <h2 class="section-title">Teaching &amp; Service</h2>
+
+        <div class="teaching-grid">
+
+          <div class="teaching-entry">
+            <h3>Math 101: Calculus I</h3>
+            <p class="teaching-role">Head TA</p>
+            <p class="teaching-term">Fall 2025</p>
+          </div>
+
+          <div class="teaching-entry">
+            <h3>Math 201: Real Analysis</h3>
+            <p class="teaching-role">Teaching Assistant</p>
+            <p class="teaching-term">Spring 2025</p>
+          </div>
+
+          <div class="teaching-entry">
+            <h3>[Outreach or Service]</h3>
+            <p class="teaching-role">Organizer</p>
+            <p class="teaching-term">2024 –</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── CONTACT ── -->
+      <section id="contact" class="content-section">
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-lead">The best way to reach me is via email.</p>
+
+        <div class="contact-block">
+          <p><strong>Email:</strong> yourname [at] university [dot] edu</p>
+          <p><strong>Office:</strong> Room XXX, Mathematics Building, [Your University]</p>
+          <p class="contact-links">
+            <a href="#" class="contact-btn">Google Scholar</a>
+            <a href="#" class="contact-btn">GitHub</a>
+            <a href="#" class="contact-btn">CV (PDF)</a>
+          </p>
+        </div>
+
+        <p class="copyright">Copyrights &copy; 2026 All Rights Reserved by Rohan M. Shenoy.</p>
+      </section>
+
+    </main>
+  </div><!-- /layout -->
+
+  <script src="script.js"></script>
 </body>
 </html>

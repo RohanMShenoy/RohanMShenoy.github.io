@@ -125,6 +125,8 @@
       <section id="publications" class="content-section">
         <h2 class="section-title">Publications &amp; Preprints</h2>
 
+        <!-- L2W -->
+
         <div class="pub-entry">
           <h3 class="pub-title">$L^2$ over Wasserstein: Statistical Analysis for Optimal Transport</h3>
           <p class="pub-authors"><strong>Rohan Shenoy</strong>, Riccardo Passeggeri, Pengcheng Ye</p>
@@ -133,9 +135,19 @@
             <summary class="abstract-btn">View Abstract</summary>
             <div class="abstract-text">
               <p>
-                Your long abstract goes here. You can include inline math like $\alpha + \beta$ 
-                or display math, and MathJax will still render it perfectly once the 
-                dropdown is clicked and opened.
+                Optimal transport provides an inherently geometric and highly structured framework for studying spaces of probability measures, 
+                supplying a rich theoretical toolkit for contemporary statistics, machine learning, and generative modelling. 
+                In applications, however, the measures of interest are almost never known precisely, calling for a theory of optimal transport that accounts for statistical uncertainty. 
+                We construct such a framework, lifting the classical theory to the setting of \textit{random} probability measures. 
+                We introduce the $L^2$ over Wasserstein space $L^2_W$, 
+                establishing that it inherits the formal Riemannian structure of the Wasserstein space by characterising distances and geodesic geometry. 
+                The structure induces random flows with Wasserstein gradient flow sample paths,
+                making it the natural extension of the Wasserstein space which allows for random gradient flow dynamics. 
+                We ensemble statistical convergence results of the optimal transport machinery using the empirical measure within the $L^2_W$ framework. 
+                Moreover, in the setting of Bayesian non-parametrics, 
+                we refine Schwartz's consistency theorem to the Wasserstein topology and deduce posterior convergence of the same machinery in $L^2_W$. 
+                We demonstrate that the growing theory of random token sampling for transformer models using self-attention flow paths can be embedded into the $L^2_W$ framework. 
+                The results provide a unified treatment of random optimal transport and its consequences for principled inference and generative modelling under the statistical uncertainty of random sampling.
               </p>
             </div>
           </details>
@@ -144,17 +156,52 @@
           </div>
         </div>
 
+        <!-- TSBM -->
+        
         <div class="pub-entry">
-          <h3 class="pub-title">Second Paper Title Goes Here</h3>
-          <p class="pub-authors"><strong>Rohan Shenoy</strong>, Another Co-author.</p>
-          <p class="pub-venue"><em>Journal of Mathematics</em>, Vol. X, No. Y (2025)</p>
-          <p class="pub-abstract">
-            <strong>Abstract:</strong> Brief description of the second paper.
-            What problem does it solve and what are the key contributions?
-          </p>
+          <h3 class="pub-title">On time subordinated Browninan motion for financial markets</h3>
+          <p class="pub-authors"><strong>Rohan Shenoy</strong>, Peter Kempthorne</p>
+          <p class="pub-venue"><em>arXiv preprint</em> (2025)</p>
+          
+          <details class="abstract-container">
+            <summary class="abstract-btn">View Abstract</summary>
+            <div class="abstract-text">
+              <p>
+                In the context of time-subordinated Brownian motion models, Fourier theory and methodology are proposed to modelling the stochastic distribution of time increments. 
+                Gaussian Variance-Mean mixtures and time-subordinated models are reviewed with a key example being the Variance-Gamma process. 
+                A non-parametric characteristic function decomposition of subordinated Brownian motion is presented. 
+                The theory requires an extension of the real domain of certain characteristic functions to the complex plane, the validity of which is proven here. 
+                This allows one to characterise and study the stochastic time-change directly from the full process. 
+                An empirical decomposition of S&P log-returns is provided to illustrate the methodology.
+              </p>
+            </div>
+          </details>
           <div class="pub-links">
-            <a href="#" class="pub-link">arXiv</a>
-            <a href="#" class="pub-link">Journal</a>
+            <a href="https://arxiv.org/abs/2510.14108v2" class="pub-link">arXiv</a>
+          </div>
+        </div>
+
+
+        <!-- DRT -->
+        
+        <div class="pub-entry">
+          <h3 class="pub-title">The discrete renewal theorem with bounded interevent times</h3>
+          <p class="pub-authors"><strong>Rohan Shenoy</strong> </p>
+          <p class="pub-venue"><em>The Mathematical Gazette. </em>, 2023;107(569):343-348. doi:10.1017/mag.2023.73</p>
+          
+          <details class="abstract-container">
+            <summary class="abstract-btn">View Abstract</summary>
+            <div class="abstract-text">
+              <p>
+                The purpose of this note is to prove the celebrated Discrete Renewal Theorem in a common special case. 
+                We use only very elementary methods from real analysis, rather than markov chain theory, complex analysis, or generating functions. 
+                Provided is an introduction to a 1d discrete renewal process via a board game example, our proof the discrete renewal theorem, 
+                as well as background and history of the Erdǒs-Feller-Pollard Theorem.
+              </p>
+            </div>
+          </details>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2510.14108v2" class="pub-link">arXiv</a>
           </div>
         </div>
 

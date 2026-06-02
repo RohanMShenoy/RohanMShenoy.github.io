@@ -15,9 +15,30 @@
   <header class="site-header">
     <div class="header-inner">
       <span class="header-name">Rohan M. Shenoy</span>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <span class="toggle-icon">&#9788;</span>
-      </button>
+      <div class="header-icons">
+        <a href="https://scholar.google.co.uk/citations?user=lbiKmxQAAAAJ&hl=en" target="_blank" rel="noopener" class="header-icon-link" aria-label="Google Scholar">
+          <!-- Google Scholar cap icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="header-svg-icon" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/pulse/question-he-almost-didnt-ask-imperial-global-usa-xhizc/" target="_blank" rel="noopener" class="header-icon-link" aria-label="LinkedIn">
+          <!-- LinkedIn icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="header-svg-icon" aria-hidden="true">
+            <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57A1.46 1.46 0 0 1 14.38 12.11A1.46 1.46 0 0 1 15.84 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/>
+          </svg>
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <!-- Sun icon (shown in light mode) -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="toggle-sun" aria-hidden="true">
+            <path d="M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0-5a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 17a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zm13.44 13.44a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zM3 11a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2h1zm19 0a1 1 0 0 1 0 2h-1a1 1 0 0 1 0-2h1zM4.92 17.66l.7-.7a1 1 0 0 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42-1.42zm13.44-13.44l.7-.7a1 1 0 0 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42-1.42z"/>
+          </svg>
+          <!-- Moon icon (shown in dark mode) -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="toggle-moon" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -39,6 +60,7 @@
           <li><a href="#research">Research</a></li>
           <li><a href="#talks">Talks</a></li>
           <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -58,18 +80,13 @@
           broadly interested in the interplay between [field A] and [field B].
         </blockquote>
 
-        <div class="about-columns">
-          <div class="about-left">
-            <h3>Affiliations</h3>
-            <ul class="affil-list">
-              <li><a href="#">Mathematics Department</a></li>
-              <li><a href="#">[Research Group or Center]</a></li>
-              <li><a href="#">[Institute / Program]</a></li>
-            </ul>
-          </div>
-          <div class="about-right">
-            <img src="profile.JPG" alt="Rohan M. Shenoy" class="about-photo" />
-          </div>
+        <div class="about-affiliations">
+          <h3>Affiliations</h3>
+          <ul class="affil-list">
+            <li><a href="#">Mathematics Department</a></li>
+            <li><a href="#">[Research Group or Center]</a></li>
+            <li><a href="#">[Institute / Program]</a></li>
+          </ul>
         </div>
 
         <div class="cv-positions">
@@ -251,6 +268,48 @@
         </div>
       </section>
 
+      <!-- ── HOBBIES & INTERESTS ── -->
+      <section id="hobbies" class="content-section">
+        <h2 class="section-title">Hobbies &amp; Interests</h2>
+
+        <div class="hobbies-grid">
+
+          <div class="hobby-entry">
+            <div class="hobby-icon" aria-hidden="true">
+              <!-- Chess piece / strategy icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 20h6v2H9v-2zm3-18C8.69 2 6 4.69 6 8c0 2.04.97 3.84 2.47 5H6v2h12v-2h-2.47A6 6 0 0 0 18 8c0-3.31-2.69-6-6-6zm0 2a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4z"/></svg>
+            </div>
+            <div class="hobby-body">
+              <h3>[Hobby One]</h3>
+              <p>A short description of this hobby or interest. What draws you to it, and how does it connect to your broader intellectual life?</p>
+            </div>
+          </div>
+
+          <div class="hobby-entry">
+            <div class="hobby-icon" aria-hidden="true">
+              <!-- Book icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2h-12C4.9 2 4 2.9 4 4v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 14H7v-2h6v2zm3-4H7v-2h9v2zm0-4H7V6h9v2z"/></svg>
+            </div>
+            <div class="hobby-body">
+              <h3>[Hobby Two]</h3>
+              <p>Describe your second interest here. This might be reading, a sport, music, travel, cooking, or anything else that matters to you outside the office.</p>
+            </div>
+          </div>
+
+          <div class="hobby-entry">
+            <div class="hobby-icon" aria-hidden="true">
+              <!-- Music / general interest icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+            </div>
+            <div class="hobby-body">
+              <h3>[Hobby Three]</h3>
+              <p>A third interest. Feel free to add or remove hobby cards as needed — this section is entirely optional and informal.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <!-- ── CONTACT ── -->
       <section id="contact" class="content-section">
         <h2 class="section-title">Contact</h2>
@@ -260,9 +319,16 @@
           <p><strong>Email:</strong> yourname [at] university [dot] edu</p>
           <p><strong>Office:</strong> Room XXX, Mathematics Building, [Your University]</p>
           <p class="contact-links">
-            <a href="#" class="contact-btn">Google Scholar</a>
-            <a href="#" class="contact-btn">GitHub</a>
+            <a href="https://scholar.google.co.uk/citations?user=lbiKmxQAAAAJ&hl=en" target="_blank" rel="noopener" class="contact-btn contact-btn--icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+              Google Scholar
+            </a>
+            <a href="https://www.linkedin.com/pulse/question-he-almost-didnt-ask-imperial-global-usa-xhizc/" target="_blank" rel="noopener" class="contact-btn contact-btn--icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57A1.46 1.46 0 0 1 14.38 12.11A1.46 1.46 0 0 1 15.84 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+              LinkedIn
+            </a>
             <a href="#" class="contact-btn">CV (PDF)</a>
+            <a href="#" class="contact-btn">GitHub</a>
           </p>
         </div>
 

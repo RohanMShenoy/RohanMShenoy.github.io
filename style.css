@@ -7,18 +7,18 @@
 :root {
   --bg:            #ffffff;
   --bg-sidebar:    #f7f6f3;
-  --bg-card:       #f9f8f5;
+  --bg-card:       #faf8f3;
   --text:          #1a1a1a;
   --text-muted:    #555555;
   --text-light:    #888888;
-  --accent:        #8b0000;        /* deep crimson — academic red */
-  --accent-hover:  #600000;
+  --accent:        #9a7b2f;        /* warm antique gold */
+  --accent-hover:  #7a6020;
   --border:        #dedbd4;
   --border-light:  #eeebe4;
-  --link:          #8b0000;
-  --link-hover:    #600000;
-  --blockquote-bg: #f4f1eb;
-  --blockquote-border: #8b0000;
+  --link:          #9a7b2f;
+  --link-hover:    #7a6020;
+  --blockquote-bg: #faf6ec;
+  --blockquote-border: #c9a84c;
   --shadow:        0 1px 4px rgba(0,0,0,0.08);
   --font-serif:    'EB Garamond', Georgia, 'Times New Roman', serif;
   --font-sans:     'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
@@ -32,14 +32,14 @@
   --text:          #e8e4dc;
   --text-muted:    #a8a49c;
   --text-light:    #6e6a62;
-  --accent:        #c9604a;
-  --accent-hover:  #e07258;
+  --accent:        #c9a84c;        /* brighter gold for dark bg */
+  --accent-hover:  #e0c06a;
   --border:        #3a3833;
   --border-light:  #2e2c29;
-  --link:          #c9604a;
-  --link-hover:    #e07258;
+  --link:          #c9a84c;
+  --link-hover:    #e0c06a;
   --blockquote-bg: #201f1c;
-  --blockquote-border: #c9604a;
+  --blockquote-border: #c9a84c;
   --shadow:        0 1px 4px rgba(0,0,0,0.35);
 }
 
@@ -108,23 +108,76 @@ h1, h2, h3, h4 {
   color: var(--text);
 }
 
-.theme-toggle {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 400;
+/* Header right-side icon group */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Scholar / LinkedIn icons in header */
+.header-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
   color: var(--text-muted);
+  transition: color 0.15s, background 0.15s;
+}
+.header-icon-link:hover {
+  color: var(--accent);
+  background: var(--border-light);
+  text-decoration: none;
+}
+
+.header-svg-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Dark / light toggle — icon only */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   background: none;
   border: 1px solid var(--border);
   border-radius: 3px;
-  padding: 4px 10px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: color 0.15s, border-color 0.15s;
+  color: var(--text-muted);
+  padding: 0;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
-.theme-toggle:hover { color: var(--text); border-color: var(--text-muted); }
-.toggle-icon { font-size: 1rem; line-height: 1; }
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--border-light);
+}
+
+.toggle-sun,
+.toggle-moon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  display: block;
+  position: absolute;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* In light mode: show sun, hide moon */
+[data-theme="light"] .toggle-sun  { opacity: 1; transform: scale(1); }
+[data-theme="light"] .toggle-moon { opacity: 0; transform: scale(0.6); }
+
+/* In dark mode: hide sun, show moon */
+[data-theme="dark"]  .toggle-sun  { opacity: 0; transform: scale(0.6); }
+[data-theme="dark"]  .toggle-moon { opacity: 1; transform: scale(1); }
 
 /* ── LAYOUT ── */
 .layout {
@@ -251,14 +304,11 @@ h1, h2, h3, h4 {
   transition: background 0.25s ease;
 }
 
-.about-columns {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
+.about-affiliations {
   margin-bottom: 2rem;
 }
 
-.about-left h3 {
+.about-affiliations h3 {
   font-size: 0.82rem;
   font-family: var(--font-sans);
   font-weight: 600;
@@ -277,14 +327,6 @@ h1, h2, h3, h4 {
 .affil-list a {
   font-family: var(--font-sans);
   font-size: 0.9rem;
-}
-
-.about-photo {
-  width: 300px;
-  height: 185px;
-  object-fit: cover;
-  border: 1px solid var(--border);
-  filter: grayscale(10%);
 }
 
 /* ── POSITIONS ── */
@@ -322,10 +364,9 @@ h1, h2, h3, h4 {
 /* ── AWARDS ── */
 .award-entry {
   position: relative;
-  padding: 1rem 0 1rem 1rem;
+  padding: 1rem 0 1rem 1.2rem;
   border-left: 3px solid var(--accent);
   margin-bottom: 1.8rem;
-  padding-left: 1.2rem;
 }
 
 .award-label {
@@ -554,6 +595,53 @@ h1, h2, h3, h4 {
   color: var(--text-light);
 }
 
+/* ── HOBBIES ── */
+.hobbies-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.hobby-entry {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.hobby-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--blockquote-bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+  transition: background 0.25s ease, border-color 0.15s;
+}
+
+.hobby-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  display: block;
+}
+
+.hobby-body h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.hobby-body p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 /* ── CONTACT ── */
 .contact-lead {
   font-size: 1rem;
@@ -581,6 +669,7 @@ h1, h2, h3, h4 {
   display: flex;
   gap: 0.7rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .contact-btn {
@@ -594,11 +683,26 @@ h1, h2, h3, h4 {
   padding: 4px 14px;
   border-radius: 2px;
   transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
 }
 .contact-btn:hover {
   background: var(--accent);
   color: #fff;
   text-decoration: none;
+}
+
+/* Icon-bearing contact buttons */
+.contact-btn--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 10px;
+}
+.contact-btn--icon svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  flex-shrink: 0;
 }
 
 .copyright {
@@ -656,14 +760,6 @@ h1, h2, h3, h4 {
     border-left: none;
   }
 
-  .about-columns {
-    grid-template-columns: 1fr;
-  }
-  .about-photo {
-    width: 140px;
-    height: 175px;
-  }
-
   .work-card {
     grid-template-columns: 90px 1fr;
     gap: 1rem;
@@ -678,4 +774,7 @@ h1, h2, h3, h4 {
   .teaching-grid { grid-template-columns: 1fr; }
   .work-card { grid-template-columns: 1fr; }
   .work-img-wrap { width: 100%; height: 100px; }
+  .hobby-entry { grid-template-columns: 38px 1fr; gap: 0.75rem; }
+  .hobby-icon { width: 38px; height: 38px; }
+  .hobby-icon svg { width: 17px; height: 17px; }
 }

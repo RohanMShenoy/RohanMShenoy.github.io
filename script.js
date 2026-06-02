@@ -13,9 +13,7 @@
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
     if (btn) {
-      btn.innerHTML = theme === 'dark'
-        ? '<span class="toggle-icon">&#9790;</span> Light Toggle'
-        : '<span class="toggle-icon">&#9788;</span> Dark Toggle';
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     }
     localStorage.setItem(STORED, theme);
   }
@@ -46,9 +44,9 @@
   });
 
   function onScroll() {
-    const scrollY   = window.scrollY;
-    const headerH   = parseInt(getComputedStyle(html).getPropertyValue('--header-h')) || 54;
-    const threshold = headerH + 40;
+    const scrollY    = window.scrollY;
+    const headerH    = parseInt(getComputedStyle(html).getPropertyValue('--header-h')) || 54;
+    const threshold  = headerH + 40;
 
     let active = sections[0];
     sections.forEach(function (s) {

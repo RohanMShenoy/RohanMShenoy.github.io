@@ -4,43 +4,46 @@
    ============================================================ */
 
 /* ── CUSTOM PROPERTIES ── */
+
+/* LIGHT MODE — Imperial College London
+   Navy #002147 · Imperial Blue #003E74 · Light Blue #D4EFFC · Light Grey #EBEEEE */
 :root {
   --bg:            #ffffff;
-  --bg-sidebar:    #f7f6f3;
-  --bg-card:       #faf8f3;
-  --text:          #1a1a1a;
-  --text-muted:    #555555;
-  --text-light:    #888888;
-  --accent:        #9a7b2f;        /* warm antique gold */
-  --accent-hover:  #7a6020;
-  --border:        #dedbd4;
-  --border-light:  #eeebe4;
-  --link:          #9a7b2f;
-  --link-hover:    #7a6020;
-  --blockquote-bg: #faf6ec;
-  --blockquote-border: #c9a84c;
-  --shadow:        0 1px 4px rgba(0,0,0,0.08);
+  --bg-card:       #f4f7fb;        /* faint Imperial blue tint */
+  --text:          #001830;        /* near-navy for body text */
+  --text-muted:    #3a4f6a;
+  --text-light:    #7a8fa8;
+  --accent:        #003E74;        /* Imperial Blue (PMS 541) */
+  --accent-hover:  #002147;        /* Navy (PMS 539) */
+  --border:        #c8d8e8;        /* cool blue-grey */
+  --border-light:  #ddeaf5;
+  --link:          #003E74;
+  --link-hover:    #002147;
+  --blockquote-bg: #eaf2fb;        /* tinted Imperial light blue */
+  --blockquote-border: #003E74;
+  --shadow:        0 1px 4px rgba(0,33,71,0.10);
   --font-serif:    'EB Garamond', Georgia, 'Times New Roman', serif;
   --font-sans:     'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
   --header-h:      54px;
 }
 
+/* DARK MODE — MIT
+   Cardinal Red #A31F34 · MIT Gray #8A8B8C · near-black background */
 [data-theme="dark"] {
-  --bg:            #1a1917;
-  --bg-sidebar:    #111110;
-  --bg-card:       #22201d;
-  --text:          #e8e4dc;
-  --text-muted:    #a8a49c;
-  --text-light:    #6e6a62;
-  --accent:        #c9a84c;        /* brighter gold for dark bg */
-  --accent-hover:  #e0c06a;
-  --border:        #3a3833;
-  --border-light:  #2e2c29;
-  --link:          #c9a84c;
-  --link-hover:    #e0c06a;
-  --blockquote-bg: #201f1c;
-  --blockquote-border: #c9a84c;
-  --shadow:        0 1px 4px rgba(0,0,0,0.35);
+  --bg:            #0f0f10;        /* near-black, neutral */
+  --bg-card:       #1a1a1c;
+  --text:          #e8e6e3;
+  --text-muted:    #a8a6a3;
+  --text-light:    #6a6868;
+  --accent:        #A31F34;        /* MIT Cardinal Red (PMS 201) */
+  --accent-hover:  #c42540;        /* slightly lighter for hover legibility */
+  --border:        #2e2d2d;
+  --border-light:  #252424;
+  --link:          #c42540;        /* lightened slightly so links are readable on dark bg */
+  --link-hover:    #e0475e;
+  --blockquote-bg: #1a1214;        /* very dark red-tinted panel */
+  --blockquote-border: #A31F34;
+  --shadow:        0 1px 4px rgba(0,0,0,0.45);
 }
 
 /* ── RESET & BASE ── */

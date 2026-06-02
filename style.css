@@ -36,10 +36,10 @@
   --text-muted:    #a8a6a3;
   --text-light:    #6a6868;
   --accent:        #A31F34;        /* MIT Cardinal Red (PMS 201) */
-  --accent-hover:  #c42540;        /* slightly lighter for hover legibility */
+  --accent-hover:  #DC143C;        /* slightly lighter for hover legibility */
   --border:        #2e2d2d;
   --border-light:  #252424;
-  --link:          #c42540;        /* lightened slightly so links are readable on dark bg */
+  --link:          #DC143C        /* lightened slightly so links are readable on dark bg */
   --link-hover:    #e0475e;
   --blockquote-bg: #1a1214;        /* very dark red-tinted panel */
   --blockquote-border: #A31F34;

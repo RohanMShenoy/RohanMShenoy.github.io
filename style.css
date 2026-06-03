@@ -1,9 +1,12 @@
 /* ============================================================
    ROHAN M. SHENOY — Academic Site CSS
-   Styled after math.mit.edu/~rigollet/
    ============================================================ */
 
 /* ── CUSTOM PROPERTIES ── */
+
+html {
+  zoom: 1.2; /* For Chrome, Safari, and Edge */
+}
 
 /* LIGHT MODE — Imperial College London
    Navy #002147 · Imperial Blue #003E74 · Light Blue #D4EFFC · Light Grey #EBEEEE */

@@ -1,12 +1,9 @@
 /* ============================================================
    ROHAN M. SHENOY — Academic Site CSS
+   Styled after math.mit.edu/~rigollet/
    ============================================================ */
 
 /* ── CUSTOM PROPERTIES ── */
-
-html {
-  zoom: 1.2; /* For Chrome, Safari, and Edge */
-}
 
 /* LIGHT MODE — Imperial College London
    Navy #002147 · Imperial Blue #003E74 · Light Blue #D4EFFC · Light Grey #EBEEEE */
@@ -39,10 +36,10 @@ html {
   --text-muted:    #a8a6a3;
   --text-light:    #6a6868;
   --accent:        #A31F34;        /* MIT Cardinal Red (PMS 201) */
-  --accent-hover:  #DC143C;        /* slightly lighter for hover legibility */
+  --accent-hover:  #c42540;        /* slightly lighter for hover legibility */
   --border:        #2e2d2d;
   --border-light:  #252424;
-  --link:          #DC143C        /* lightened slightly so links are readable on dark bg */
+  --link:          #c42540;        /* lightened slightly so links are readable on dark bg */
   --link-hover:    #e0475e;
   --blockquote-bg: #1a1214;        /* very dark red-tinted panel */
   --blockquote-border: #A31F34;
@@ -296,18 +293,19 @@ h1, h2, h3, h4 {
 }
 
 /* ── ABOUT ── */
-.bio-quote {
+.bio-card {
   font-family: var(--font-serif);
   font-size: 1.05rem;
   font-style: normal;
   line-height: 1.75;
-  background: var(--blockquote-bg);
-  border-left: 4px solid var(--blockquote-border);
-  padding: 1rem 1.4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  padding: 1.2rem 1.5rem;
   margin-bottom: 2rem;
-  border-radius: 0 3px 3px 0;
-  color: var(--text-muted);
-  transition: background 0.25s ease;
+  border-radius: 3px;
+  color: var(--text);
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .about-affiliations {

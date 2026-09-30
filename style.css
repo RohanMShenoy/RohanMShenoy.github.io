@@ -579,19 +579,6 @@ h1, h2, h3, h4 {
 }
 .teaching-entry:hover { border-color: var(--accent); }
 
-.teaching-entry-link {
-  display: block;
-  padding: 1rem 1.1rem; /* Preserves card padding inside the link area */
-  text-decoration: none;
-  color: inherit; /* Preserves original text color */
-}
-
-.teaching-entry h3 {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
-}
-
 .teaching-entry h3 {
   font-size: 0.95rem;
   font-weight: 500;

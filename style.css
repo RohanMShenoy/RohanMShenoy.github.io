@@ -365,6 +365,36 @@ h1, h2, h3, h4 {
   color: var(--text-muted);
 }
 
+/* ── PRIZES TOGGLE ── */
+.pos-prizes {
+  margin-top: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.83rem;
+}
+
+.pos-prizes-toggle {
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  transition: color 0.15s ease;
+}
+
+.pos-prizes-toggle:hover {
+  color: var(--text-light);
+}
+
+.pos-prizes[open] .pos-prizes-toggle {
+  margin-bottom: 0.3rem;
+}
+
+.pos-prizes-list {
+  margin: 0 0 0 1.1rem;
+  padding: 0;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
 /* ── AWARDS ── */
 .award-entry {
   position: relative;
